@@ -22,6 +22,12 @@
 	
 	cell.textLabel.text = surname.name;
 	
+	if (surname.surnameId.integerValue == NSNotFound) {
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+	} else {
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	}
+	
     return cell;
 }
 
