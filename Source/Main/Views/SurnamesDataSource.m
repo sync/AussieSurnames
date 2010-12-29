@@ -21,12 +21,12 @@
 	Surname *surname = [self surnameForIndexPath:indexPath];
 	
 	cell.textLabel.text = surname.name;
+	cell.detailTextLabel.text = (surname.amount) ? [NSString stringWithFormat:@"%@", surname.amount] : nil;
 	
 	if (surname.surnameId.integerValue == NSNotFound) {
 		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	} else {
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", surname.amount];
 	}
 	
     return cell;
