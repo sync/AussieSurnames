@@ -14,13 +14,14 @@
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SurnamesCellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SurnamesCellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SurnamesCellIdentifier] autorelease];
 		cell.accessoryType = UITableViewCellAccessoryNone;
     }
 	
 	Surname *surname = [self surnameForIndexPath:indexPath];
 	
 	cell.textLabel.text = surname.name;
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", surname.amount];
 	
 	if (surname.surnameId.integerValue == NSNotFound) {
 		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
