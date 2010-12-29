@@ -19,8 +19,6 @@
 	
 	self.navigationItem.title = @"Australian Surnames";
 	
-	[self.searchBar becomeFirstResponder];
-	
 	self.page = 1;
 }
 
